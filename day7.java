@@ -5,8 +5,8 @@ public class day7 {
     public static void main(String[] args) {
         recursionProblems r = new recursionProblems();
         int[] arr = {1,2,1};
-        r.getAllSubsequences(0,arr,new ArrayList<>());
-        // r.getSubsequnces(0, arr, 2, new ArrayList<>(),0);
+        // r.getAllSubsequences(0,arr,new ArrayList<>());
+        r.getSubsequnces(0, arr, 2, new ArrayList<>(),0);
     }
 }
 
@@ -37,23 +37,23 @@ class recursionProblems{
     // problem:- print all the subsequences whos sum is equal to sum.
     // example :-arr = {1,2,1}, sum = 2=> {[1,1],[2]}
 
-    // void getSubsequnces(int ind,int[] arr,int sum,List<Integer> current,int csum){
-    //     if(ind >= arr.length){
-    //         if(csum == sum){
-    //             System.out.println(current);
-    //         }
-    //         return;
-    //     }
+    void getSubsequnces(int ind,int[] arr,int sum,List<Integer> current,int csum){
+        if(ind >= arr.length){
+            if(csum == sum){
+                System.out.println(current);
+            }
+            return;
+        }
 
-    //     //  take the element 
-    //     current.add(arr[ind]);
-    //     getSubsequnces(ind+1, arr, sum, current, csum+arr[ind]);
+        //  take the element 
+        current.add(arr[ind]);
+        getSubsequnces(ind+1, arr, sum, current, csum+arr[ind]);
 
-    //     // backtrack 
-    //     current.remove(current.size()-1);
+        // backtrack 
+        current.remove(current.size()-1);
 
-    //     //  move forward without element
-    //     getSubsequnces(ind+1, arr, sum, current, csum);
+        //  move forward without element
+        getSubsequnces(ind+1, arr, sum, current, csum);
 
-    // }
+    }
 }
