@@ -1,20 +1,20 @@
 public class day6 {
     public static void main(String[] args) {
         rec1 r = new rec1();
-        // r.function(1, 5);
-        // r.function1( 5);
-        // int sum = r.fun(5);
-        // System.out.println("sum = "+sum);
-        // int fact = r.factorail(5);
-        // System.out.println("Factorial value : "+fact);
+        r.function(1, 5);
+        r.function1( 5);
+        int sum = r.fun(5);
+        System.out.println("sum = "+sum);
+        int fact = r.factorail(5);
+        System.out.println("Factorial value : "+fact);
 
-        // int[] arr = {2,3,4,5,6};
-        // r.reverseArray(arr);
+        int[] arr = {2,3,4,5,6};
+        r.reverseArray(arr);
 
-        // System.out.println("reversed array : ");
-        // for(int num:arr){
-        // System.out.print(num+" ");
-        // }
+        System.out.println("reversed array : ");
+        for(int num:arr){
+        System.out.print(num+" ");
+        }
 
         boolean res = r.isPalindrome("abba", 0, 3);
         System.out.println("Is palindrom : " + res);
