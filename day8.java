@@ -1,5 +1,6 @@
 public class day8 {
     public static void main(String[] args) {
+        // Searching => linear and binary
         Search s = new Search();
         int arr [] = {10,20,30,40,50};
         int key = 20;
@@ -7,13 +8,29 @@ public class day8 {
         int left = 0;
         int right = arr.length-1;
 
-        // s.linearSearch();
-        // s.binarySearch();
+        long start1 = System.nanoTime();
+        s.linearSearch();
+        long end1 = System.nanoTime();
+        
+        long start2 = System.nanoTime();
+        s.binarySearch();
+        long end2 = System.nanoTime();
+
+        long start3 = System.nanoTime();
         s.binarySearchUsingRecursion(arr, key, left, right);
+        long end3 = System.nanoTime();
+
+        // compairing the performance time.
+        System.out.println("Time required for linear search : "+(end1-start1)/10000);
+        System.out.println("Time required for Binary search : "+(end2-start2)/10000);
+        System.out.println("Time required for Recursive Binary search : "+(end3-start3)/10000);
+        
     }
 
 }
 
+
+ 
 class Search{
     void linearSearch(){
         int arr [] = {10,20,30,40,50};
@@ -71,3 +88,5 @@ class Search{
 
     }
 }
+
+
