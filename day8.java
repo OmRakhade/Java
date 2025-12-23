@@ -1,42 +1,83 @@
 public class day8 {
     public static void main(String[] args) {
         // // Searching => linear and binary
-        Search s = new Search();
-        int arr [] = {10,20,30,40,50};
-        int key = 20;
+        // Search s = new Search();
+        // int arr[] = { 10, 20, 30, 40, 50 };
+        // int key = 20;
 
-        int left = 0;
-        int right = arr.length-1;
+        // int left = 0;
+        // int right = arr.length - 1;
 
-        long start1 = System.nanoTime();
-        s.linearSearch();
-        long end1 = System.nanoTime();
+        // long start1 = System.nanoTime();
+        // s.linearSearch();
+        // long end1 = System.nanoTime();
 
-        long start2 = System.nanoTime();
-        s.binarySearch();
-        long end2 = System.nanoTime();
+        // long start2 = System.nanoTime();
+        // s.binarySearch();
+        // long end2 = System.nanoTime();
 
-        long start3 = System.nanoTime();
-        s.binarySearchUsingRecursion(arr, key, left, right);
-        long end3 = System.nanoTime();
+        // long start3 = System.nanoTime();
+        // s.binarySearchUsingRecursion(arr, key, left, right);
+        // long end3 = System.nanoTime();
 
-        // compairing the performance time.
-        System.out.println("Time required for linear search : "+(end1-start1)/10000);
-        System.out.println("Time required for Binary search : "+(end2-start2)/10000);
-        System.out.println("Time required for Recursive Binary search :"+(end3-start3)/10000);
+        // // compairing the performance time.
+        // System.out.println("Time required for linear search : " + (end1 - start1) /
+        // 10000);
+        // System.out.println("Time required for Binary search : " + (end2 - start2) /
+        // 10000);
+        // System.out.println("Time required for Recursive Binary search :" + (end3 -
+        // start3) / 10000);
 
-        // // shifting elements in array
-        int arr1[] = { 10, 20, 30, 40, 50 };
-        int key1 = 3;
-        ShiftingArrayElement a = new ShiftingArrayElement();
-        a.ShiftToRight(arr1, key1);
+        // // // shifting elements in array
+        // int arr1[] = { 10, 20, 30, 40, 50 };
+        // int key1 = 4;
+        // ShiftingArrayElement a = new ShiftingArrayElement();
+        // a.ShiftToRight(arr1, key1);
 
-        for (int elem : arr1) {
-            System.out.print(elem + " ");
-        }
+        // for (int elem : arr1) {
+        // System.out.print(elem + " ");
+        // }
+
+        // // Hashing
+        Hashing h = new Hashing();
+        h.NumberHashing();
+        h.CharcterHashing();
 
     }
 
+}
+
+class Hashing {
+    void NumberHashing() {
+        int[] arr = { 1, 2, 3, 1, 2, 1 };
+        int[] hash = new int[13];
+
+        for (int value : arr) {
+            hash[value]++;
+        }
+
+        System.out.println("Count of 1 : " + hash[1]);
+        System.out.println("Count of 2 :" + hash[2]);
+    }
+    int asscival(char ch){
+        return (int) ch;
+    }
+    void CharcterHashing(){
+        String string = "Madam";
+        int[] hash = new int[256];
+
+        for(char ch : string.toCharArray()){
+            // int index = (int) ch;
+            hash[ch] +=1; //autocasting char to int or asscii val
+        }
+
+       System.out.println("Count of a :"+ hash['a']);
+       System.out.println("Count of m :"+ hash['m']);
+    
+       System.out.println("Count of M :"+ hash[asscival('M')]);
+
+
+    }
 }
 
 class ShiftingArrayElement {
@@ -55,11 +96,15 @@ class ShiftingArrayElement {
         // reverse whole array 50 40 30 20 10
         reverse(arr, 0, (arr.length - 1));
 
-        // reverse array up to the key is given. from left to key-1.  40 50 30 20 10
+        // reverse array up to the key is given. from left to key-1. 40 50 30 20 10
         reverse(arr, 0, key1 - 1);
 
         // reverse array from key-1 to lenght of array. 40 50 10 20 30
         reverse(arr, key1, arr.length - 1);
+
+    }
+
+    void ShiftToLeft() {
 
     }
 }
