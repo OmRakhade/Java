@@ -1,9 +1,9 @@
 // Variables 
 // variable is container that holds a value while the java program is executed, the variable is assigned with the datatype, it is name of reserved area locate in memory or name of memory location.
-// variable is combination or "vary"+"able" which means its value can change.
+// variable is combination of "vary"+"able" which means its value can change.
 // Type of variables: local, instance, static variable
 // Local variable declared inside a body of the method, you can use this within a method and other methods arent aware of this variable.
-
+// Local variable must intialize before use.
 class day3{
 public static void main(String [] args){
     int test = 10;
@@ -36,7 +36,7 @@ class student {
 
 
 // Static Variable
-//A variable that is declared as static is called a static variableda. It cannot be local. You can create a single copy of the static variable and share it among all the instances of the class. Memory allocation for static variables happens only once when the class is loaded in the memory.
+//A variable that is declared as static is called a static variable. It cannot be local. You can create a single copy of the static variable and share it among all the instances of the class. Memory allocation for static variables happens only once when the class is loaded in the memory.
 
 class department {
     static String name = "information technology";

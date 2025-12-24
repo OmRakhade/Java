@@ -6,8 +6,8 @@ public class day7 {
         recursionProblems r = new recursionProblems();
         int[] arr = {1,2,1};
         int sum = 2;
-        // r.getAllSubsequences(0,arr,new ArrayList<>());
-        // r.getSubsequnces(0, arr, sum, new ArrayList<>(),0);
+        r.getAllSubsequences(0,arr,new ArrayList<>());
+        r.getSubsequnces(0, arr, sum, new ArrayList<>(),0);
         int count = r.getCoutnOfSubsequences(0, arr, sum, 0, 0);
         System.out.println("COUNT = "+count);
     }

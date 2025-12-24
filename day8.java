@@ -1,42 +1,42 @@
 public class day8 {
     public static void main(String[] args) {
         // // Searching => linear and binary
-        // Search s = new Search();
-        // int arr[] = { 10, 20, 30, 40, 50 };
-        // int key = 20;
+        Search s = new Search();
+        int arr[] = { 10, 20, 30, 40, 50 };
+        int key = 20;
 
-        // int left = 0;
-        // int right = arr.length - 1;
+        int left = 0;
+        int right = arr.length - 1;
 
-        // long start1 = System.nanoTime();
-        // s.linearSearch();
-        // long end1 = System.nanoTime();
+        long start1 = System.nanoTime();
+        s.linearSearch();
+        long end1 = System.nanoTime();
 
-        // long start2 = System.nanoTime();
-        // s.binarySearch();
-        // long end2 = System.nanoTime();
+        long start2 = System.nanoTime();
+        s.binarySearch();
+        long end2 = System.nanoTime();
 
-        // long start3 = System.nanoTime();
-        // s.binarySearchUsingRecursion(arr, key, left, right);
-        // long end3 = System.nanoTime();
+        long start3 = System.nanoTime();
+        s.binarySearchUsingRecursion(arr, key, left, right);
+        long end3 = System.nanoTime();
 
-        // // compairing the performance time.
-        // System.out.println("Time required for linear search : " + (end1 - start1) /
-        // 10000);
-        // System.out.println("Time required for Binary search : " + (end2 - start2) /
-        // 10000);
-        // System.out.println("Time required for Recursive Binary search :" + (end3 -
-        // start3) / 10000);
+        // compairing the performance time.
+        System.out.println("Time required for linear search : " + (end1 - start1) /
+        10000);
+        System.out.println("Time required for Binary search : " + (end2 - start2) /
+        10000);
+        System.out.println("Time required for Recursive Binary search :" + (end3 -
+        start3) / 10000);
 
-        // // // shifting elements in array
-        // int arr1[] = { 10, 20, 30, 40, 50 };
-        // int key1 = 4;
-        // ShiftingArrayElement a = new ShiftingArrayElement();
-        // a.ShiftToRight(arr1, key1);
+        // // shifting elements in array
+        int arr1[] = { 10, 20, 30, 40, 50 };
+        int key1 = 4;
+        ShiftingArrayElement a = new ShiftingArrayElement();
+        a.ShiftToRight(arr1, key1);
 
-        // for (int elem : arr1) {
-        // System.out.print(elem + " ");
-        // }
+        for (int elem : arr1) {
+        System.out.print(elem + " ");
+        }
 
         // // Hashing
         Hashing h = new Hashing();

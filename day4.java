@@ -11,8 +11,7 @@ public class day4 {
         // ans :- -128
 
         // float f = 3.14;
-        // ans :- error: incompatible types: possible lossy conversion from double to
-        // float
+        // ans :- error: incompatible types: possible lossy conversion from double to float
 
         // int x;
         // System.out.println(x);
