@@ -91,7 +91,7 @@ class ShiftingArrayElement {
             p1 -= 1;
         }
     }
-
+    // 10 20 30 40 50
     void ShiftToRight(int[] arr, int key1) {
         // reverse whole array 50 40 30 20 10
         reverse(arr, 0, (arr.length - 1));
